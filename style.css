@@ -1,0 +1,139 @@
+:root {
+  /* clrs.cc used under MIT license */
+  --navy: #001f3f;
+  --blue: #0074d9;
+  --aqua: #7fdbff;
+  --teal: #39cccc;
+  --olive: #3d9970;
+  --green: #2ecc40;
+  --lime: #01ff70;
+  --yellow: #ffdc00;
+  --orange: #ff851b;
+  --red: #ff4136;
+  --maroon: #85144b;
+  --fuchsia: #f012be;
+  --purple: #b10dc9;
+  --black: #111111;
+  --gray: #aaa;
+  --silver: #ddd;
+  --white: #fff;
+
+  /* our variables */
+  --text-main: var(--black);
+  --links: var(--blue);
+  --links-hover: var(--teal);
+  --background-body: var(--white);
+  --background-header: var(--fuchsia);
+
+  --max-content-width: 50ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-main: #dbdbdb;
+    --links: var(--aqua);
+    --links-hover: var(--blue);
+    --background-body: #202b38;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 12pt;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-body);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+a {
+  color: var(--links);
+  text-underline-offset: 2px;
+  transition: .2s color;
+}
+
+a:hover {
+  color: var(--links-hover);
+}
+
+.cta {
+  display: block;
+  margin: 1rem auto;
+  background-color: var(--fuchsia);
+  color: var(--white);
+  border: none;
+  font-size: 1.2rem;
+  max-width: -webkit-max-content;
+  max-width: max-content;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  transition: .2s background-color;
+  text-align: center;
+  border-radius: .4rem;
+}
+
+.cta:hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+header {
+  height: 40vh;
+  max-height: 20ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-header);
+  padding: 3rem 2ch 0 2ch;
+  color: var(--white);
+}
+
+@media screen and (min-width: 200ch) {
+  header ~ svg {
+    margin-bottom: -3rem;
+  }
+}
+
+svg.wave {
+  max-width: 100vw;
+  display: block;
+}
+
+svg.wave path {
+  fill: var(--background-header)
+}
+
+main {
+  flex: 1;
+  margin: auto;
+  max-width: var(--max-content-width);
+  padding: 0 2ch;
+}
+
+section {
+  margin-bottom: 2ch;
+}
