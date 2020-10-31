@@ -6,16 +6,16 @@ command = "git submodule update --init --recursive --depth=1 && jekyll build"
   JEKYLL_ENV = "production"
   PYTHON_VERSION = "3.7"
   NODE_VERSION = "14"
-  RUBY_VERSION = "2.7"
+  RUBY_VERSION = "2.7.1"
 
 [context.branch-deploy.environment]
   JEKYLL_ENV = "staging"
   PYTHON_VERSION = "3.7"
   NODE_VERSION = "14"
-  RUBY_VERSION = "2.7"
+  RUBY_VERSION = "2.7.1"
 
 [context.deploy-preview.environment]
   JEKYLL_ENV = "staging"
   PYTHON_VERSION = "3.7"
   NODE_VERSION = "14"
-  RUBY_VERSION = "2.7"
+  RUBY_VERSION = "2.7.1"
