@@ -1,5 +1,7 @@
 # Solanum IRCd Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/79c74d87-7064-4d00-9ec1-803a12164006/deploy-status)](https://app.netlify.com/sites/solanum/deploys)
+
 ## Authoring
 
 There are currently three collections present, `_doc` for documentation, `_spec` for specifications and `_posts` for news. These will automatically get the right layout. FOr pages outside those folders, `layout: page` is probably what you want
