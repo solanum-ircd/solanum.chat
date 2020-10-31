@@ -6,6 +6,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "css/pygments.css";
 
 * {
   @apply box-border;
@@ -70,12 +71,6 @@ main figure.code .hll {
   @apply bg-gray-800;
 }
 
-main code {
-  @apply text-gray-900;
-  font-weight: 600;
-  @apply text-sm;
-}
-
 main h2 code {
   @apply text-2xl;
 }
@@ -87,21 +82,27 @@ main img, main video {
   @apply my-4;
 }
 
-main code::before,
-main code::after {
-  content: "`";
-}
-
 main pre {
   @apply text-sm;
   @apply text-gray-200;
   @apply bg-gray-800;
   @apply overflow-x-auto;
   @apply rounded;
-  @apply px-2;
   @apply px-3;
   @apply my-2;
+  @apply font-mono;
   line-height: 1.71;
+}
+
+main code,
+main kbd {
+  @apply text-sm;
+  @apply text-gray-200;
+  @apply bg-gray-800;
+  @apply rounded;
+  @apply px-2;
+  @apply py-1;
+  @apply font-mono;
 }
 
 main pre code {
@@ -114,11 +115,6 @@ main pre code {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
-}
-
-main pre code::before,
-main pre code::after {
-  content: "";
 }
 
 main div.table-container {
@@ -157,6 +153,8 @@ article p {
 main a {
   @apply text-gray-900;
   @apply underline;
+  text-decoration-skip: ink;
+  text-underline-offset: 2px;
 }
 
 main h1 a,
@@ -198,10 +196,10 @@ main ol > li::before {
 
 main ul > li::before {
   @apply absolute;
-  @apply bg-gray-300;
+  @apply bg-gray-400;
   @apply w-2;
   @apply h-2;
-  top: 0.25em;
+  top: 0.5em;
   left: 0.25em;
   border-radius: 50%;
   content: "";

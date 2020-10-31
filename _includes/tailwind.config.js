@@ -4,6 +4,7 @@ module.exports = {
     fontFamily: {
       display: ['Nunito', 'sans-serif'],
       sans: ['Poppins', 'sans-serif'],
+      mono: ['\'Ubuntu Mono\'', 'monospace']
     },
     maxWidth: {
       '2xs': '16rem',
