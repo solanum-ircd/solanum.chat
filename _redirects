@@ -1,0 +1,21 @@
+---
+---
+
+# I am so sorry for the following
+# We loop through all collections in the site,
+# and then we loop through all documents in those collections
+# after which we check if that page has alias(es)
+# if alias is a string, we output just that one,
+# af alias is an array we output all of them
+# this create 308 redirects for all aliases to their source file
+{% for collection in site.collections %}
+{% for item in collection.docs %}
+{% if item.alias and item.alias.first %}
+{% for alias in item.alias %}
+{{ alias | relative_url }}	{{ item.url | relative_url }}	308
+{% endfor %}
+{% elsif item.alias %}
+{{ item.alias | relative_url }}	{{ item.url | relative_url }}	308
+{% endif %}
+{% endfor%}
+{% endfor %}

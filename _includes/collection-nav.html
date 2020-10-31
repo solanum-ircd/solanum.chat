@@ -1,0 +1,36 @@
+<aside class="w-full lg:w-1/5 px-8 text-xl text-gray-800 leading-normal flex-grow-0">
+  {% assign collection = site.collections | where: "label", page.collection | first %}
+  <details class="w-full sticky inset-0 overflow-x-hidden overflow-y-hidden lg:overflow-y-auto mt-0" style="top: 5rem;"
+    id="collection-nav">
+    <summary class="cursor-pointer text-base font-bold py-2 text-gray-700 whitespace-no-wrap">
+      {{ collection.name }}
+    </summary>
+
+    <nav>
+      {% for item in collection.docs %}
+      {% if item.path == page.path %}
+      <a href="{{ item.url }}"
+        class="cursor-pointer block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent border-purple-500 hover:border-purple-500">
+        <span class="pb-1 md:pb-0 text-sm">{{ item.title }}</span></a>
+      {% else %}
+      <a href="{{ item.url }}"
+        class="cursor-pointer block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
+        <span class="pb-1 md:pb-0 text-sm">{{ item.title }}</span></a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+  </details>
+</aside>
+
+<script type="module">
+  const details = document.getElementById('collection-nav')
+
+  function openOnLgScreens() {
+    if (window.innerWidth >= 1024) {
+      details.setAttribute('open', 'true')
+    }
+  }
+
+  window.onresize = openOnLgScreens
+  openOnLgScreens()
+</script>

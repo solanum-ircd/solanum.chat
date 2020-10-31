@@ -1,0 +1,20 @@
+<article>
+  {% if include.short %}
+  <h2 class="mb-0"><a class="" href="{{ include.post.url }}">{{ include.post.title }}</a></h2>
+  {% else %}
+  <h1 class="mt-0 text-4xl font-display">{{ include.post.title }}</h1>
+  {% endif %}
+  <span class="text-gray-500">
+    <time
+      datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date_to_string: "ordinal" }}</time>
+    {% if include.post.author %}
+    by {{ include.post.author }}
+    {% endif %}
+  </span>
+  {% if include.short %}
+  {{ include.post.excerpt }}
+  <p><a href="{{ include.post.url }}">Read more...</a></p>
+  {% else %}
+  {{ include.post.content }}
+  {% endif %}
+</article>

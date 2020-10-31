@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <meta name="theme-color" content="#553686">
+  <link rel="canonical" href="https://solanum.chat/" />
+  <link rel="icon" href="{{ '/img/solanum.png' | absolute_url }}" />
+  {% seo %}
+  {% feed_meta %}
+  <link href="{{ '/css/style.css' | absolute_url }}" rel="stylesheet">
+  <link href="{{ '/css/pygments.css' | absolute_url }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 tracking-normal relative min-h-screen flex flex-col">
+  {% include header.html %}
+  {{ content }}
+  <div class="flex-grow"></div>
+  {% include footer.html %}

@@ -1,0 +1,21 @@
+[build]
+publish = "_site/"
+command = "git submodule update --init --recursive --depth=1 && jekyll build"
+
+[context.production.environment]
+  JEKYLL_ENV = "production"
+  PYTHON_VERSION = "3.8"
+  NODE_VERSION = "14"
+  RUBY_VERSION = "2.7"
+
+[context.branch-deploy.environment]
+  JEKYLL_ENV = "staging"
+  PYTHON_VERSION = "3.8"
+  NODE_VERSION = "14"
+  RUBY_VERSION = "2.7"
+
+[context.deploy-preview.environment]
+  JEKYLL_ENV = "staging"
+  PYTHON_VERSION = "3.8"
+  NODE_VERSION = "14"
+  RUBY_VERSION = "2.7"

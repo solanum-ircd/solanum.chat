@@ -1,0 +1,231 @@
+---
+---
+
+/* Base styles based on https://github.com/tailwindlabs/tailwindcss-typography released under a MIT license */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  @apply box-border;
+}
+main {
+  overflow-x: hidden;
+}
+
+main h1, main h2, main h3, main h4 {
+  @apply font-display;
+  @apply font-bold;
+}
+
+main h1 {
+  @apply text-4xl;
+  @apply mt-0;
+  @apply mb-3;
+  line-height: 1.1;
+}
+main h2 {
+  @apply text-2xl;
+  @apply mt-4;
+  @apply mb-2;
+  line-height: 1.33;
+}
+main h3 {
+  @apply text-xl;
+  @apply mt-3;
+  @apply mb-1;
+  line-height: 1.6;
+}
+main h4 {
+  @apply mt-3;
+  @apply mb-1;
+  @apply font-bold;
+  line-height: 1.5;
+}
+
+main figure {
+  @apply my-4;
+}
+
+main figure > * {
+  @apply my-0;
+}
+
+main figure figcaption {
+  @apply text-gray-500;
+  @apply text-sm;
+  @apply mt-2;
+  line-height: 1.43;
+}
+
+main figure.code {
+  @apply overflow-x-auto;
+  @apply my-2;
+}
+
+main figure.code .hll {
+  @apply p-2;
+  @apply rounded-lg;
+  @apply bg-gray-800;
+}
+
+main code {
+  @apply text-gray-900;
+  font-weight: 600;
+  @apply text-sm;
+}
+
+main h2 code {
+  @apply text-2xl;
+}
+main h3 code {
+  @apply text-xl;
+}
+
+main img, main video {
+  @apply my-4;
+}
+
+main code::before,
+main code::after {
+  content: "`";
+}
+
+main pre {
+  @apply text-sm;
+  @apply text-gray-200;
+  @apply bg-gray-800;
+  @apply overflow-x-auto;
+  @apply rounded;
+  @apply px-2;
+  @apply px-3;
+  @apply my-2;
+  line-height: 1.71;
+}
+
+main pre code {
+  @apply bg-transparent;
+  @apply border-none;
+  @apply rounded-none;
+  @apply p-0;
+  font-weight: 400;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+main pre code::before,
+main pre code::after {
+  content: "";
+}
+
+main div.table-container {
+  @apply overflow-x-auto;
+}
+
+main div.table-container table {
+  @apply table-auto;
+  @apply border-collapse;
+}
+
+main div.table-container table thead th {
+  @apply px-4;
+  @apply py-2;
+}
+
+main div.table-container table tbody td {
+  @apply px-4;
+  @apply py-2;
+  @apply border;
+  @apply border-gray-400;
+}
+
+main div.table-container table tbody tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+article p:first-of-type {
+  @apply mt-2;
+}
+
+article p {
+  @apply mb-2;
+}
+
+main a {
+  @apply text-gray-900;
+  @apply underline;
+}
+
+main h1 a,
+main h2 a,
+main h3 a,
+main h4 a {
+  @apply no-underline;
+}
+
+main a:hover {
+  @apply text-purple-700;
+}
+
+main strong {
+  @apply font-bold;
+}
+
+main ol {
+  counter-reset: list-counter;
+}
+
+main ol > li {
+  counter-increment: list-counter;
+}
+
+main ol > li,
+main ul > li {
+  @apply relative;
+  @apply pl-6;
+}
+
+main ol > li::before {
+  @apply absolute;
+  @apply text-gray-400;
+  @apply font-semibold;
+  @apply left-0;
+  content: counter(list-counter) ".";
+}
+
+main ul > li::before {
+  @apply absolute;
+  @apply bg-gray-300;
+  @apply w-2;
+  @apply h-2;
+  top: 0.25em;
+  left: 0.25em;
+  border-radius: 50%;
+  content: "";
+}
+
+main hr {
+  @apply border-gray-200;
+  @apply border-t;
+}
+
+main blockquote {
+  @apply italic;
+  @apply text-gray-700;
+  @apply border-gray-200;
+  @apply my-2;
+  @apply pl-4;
+  border-left-width: 0.25rem;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+main blockquote p:first-of-type::before {
+  content: open-quote;
+}
+
+main blockquote p:last-of-type::after {
+  content: close-quote;
+}

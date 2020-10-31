@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16 pb-16 flex-auto flex-shrink-0">
+  {% if page.collection %}
+  {% include collection-nav.html %}
+  {% endif %}
+  <main
+    class="w-full {% if page.collection %} lg:w-4/5 lg:mt-0 {% endif %} p-8 mt-6 text-gray-900 leading-normal bg-white border border-gray-400 rounded">
+    <article>
+      {% include post.html post=page %}
+    </article>
+  </main>
+</div>
