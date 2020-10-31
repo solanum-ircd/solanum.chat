@@ -23,3 +23,7 @@ alias:
 ```
 
 Will create a redirect from https://solanum.chat/identify-msg to https://solanum.chat/spec/identify-msg
+
+## Credits and such
+
+Design based on one by tailwindtoolbox, which is released under an MIT license, which can be found [here](https://github.com/tailwindtoolbox/Help-Article/blob/master/LICENSE)
