@@ -1,5 +1,6 @@
 ---
 title: Solanum 1.0
+published: false
 ---
 
 Includes changes from charybdis-4.1.3-dev.
