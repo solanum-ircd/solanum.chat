@@ -3,7 +3,7 @@ lang: en_UK
 # email: your-email@example.com
 description: >-
   Solanum is the upcoming IRCd that's being shepherded on by a collaboration of
-  freenode and OFTC staff.
+  Libera Chat and OFTC staff.
 url: https://solanum.chat
 github_username: solanum-ircd
 logo: /img/solanum.optimised.svg
