@@ -13,9 +13,16 @@ The tag MUST be named `solanum.chat/identified` and specifies no value.
 
 The tag MUST be added by the ircd to all commands sent by a user (e.g. PRIVMSG, MODE, NOTICE, and all others) and numeric replies sent on behalf of the user.
 
-Example::
+Example
+-------
 
-    @solanum.chat/identified :glguy PRIVMSG demo_user :hi, friend.
+Consider that I am identified the `glguy` services account and I have also grouped the `glguy_` nickname to that account. These are the expected results from chatting with `friend` as `glguy`, `glguy_`, and `notme`.
+
+::
+
+    @solanum.chat/identified :glguy PRIVMSG friend :hi, friend.
+    @solanum.chat/identified :glguy_ PRIVMSG friend :I'm using my alt.
+    :notme PRIVMSG friend :This isn't my nickname.
 
 Relationship to other extensions
 ================================
