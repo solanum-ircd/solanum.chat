@@ -16,7 +16,7 @@ The tag MUST be added by the ircd to all commands sent by a user (e.g. PRIVMSG, 
 Example
 -------
 
-Consider that I am identified the `glguy` services account and I have also grouped the `glguy_` nickname to that account. These are the expected results from chatting with `friend` as `glguy`, `glguy_`, and `notme`.
+Consider that I am identified to the `glguy` services account and I have also grouped the `glguy_` nickname to that account. These are the expected results from chatting with `friend` as `glguy`, `glguy_`, and `notme`.
 
 ::
 
