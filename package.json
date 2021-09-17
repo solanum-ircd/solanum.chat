@@ -7,5 +7,8 @@
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^2.2.15"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3"
   }
 }
