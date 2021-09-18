@@ -4,7 +4,12 @@ module.exports = {
   plugins: [
     require('postcss-import'),
     require('tailwindcss')('./_includes/tailwind.config.js'),
-    require('postcss-preset-env'),
+    require('postcss-preset-env')({
+      stage: 1,
+      features: {
+        'focus-within-pseudo-class': false
+      }
+    }),
     require('autoprefixer'),
     require('@fullhuman/postcss-purgecss')({
       content: ['!(_site|node_modules)/**/*.+(html|js|md)', '*.html'],
