@@ -26,3 +26,10 @@ I will send messages to three users with different configured levels of visibili
     @solanum.chat/oper=glguy :glguy_ PRIVMSG full_access_friend :it's me!
     @solanum.chat/oper :glguy_ PRIVMSG partial_access_friend :you can see I'm an oper
     :glguy_ PRIVMSG acquaintence :don't mind me
+
+Solanum Implementation
+======================
+
+The ``solanum.chat/oper`` tag is not sent for operators with the ``oper:hidden`` privilege or on servers with the ``general { hide_opers = yes; }`` configuration setting unless the receiving operator has the ``auspex:oper`` privilege.
+
+Operator account names are only shown to other operators. Normal clients will find the tag's value omitted.
