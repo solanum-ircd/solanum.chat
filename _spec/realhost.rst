@@ -7,7 +7,7 @@ alias:
 Description
 ===========
 
-The ``solanum.chat/realhost`` capability causes the server to add `messages tag <https://ircv3.net/specs/extensions/message-tags>`_ to messages sent by a user showing that user's IP address and hostname, when visible.
+The ``solanum.chat/realhost`` capability causes the server to add `messages tags <https://ircv3.net/specs/extensions/message-tags>`_ to messages sent by a user showing that user's IP address and hostname, when visible.
 
 The tag indicating IP address MUST be named ``solanum.chat/ip`` and specifies the IP address of the sender.
 
