@@ -7,7 +7,7 @@ alias:
 Description
 ===========
 
-The ``solanum.chat/realhost`` capability causes the server to add `messages tag <https://ircv3.net/specs/extensions/message-tags>`_ to messages sent by a user showing that users IP address and hostname, when visible.
+The ``solanum.chat/realhost`` capability causes the server to add `messages tag <https://ircv3.net/specs/extensions/message-tags>`_ to messages sent by a user showing that user's IP address and hostname, when visible.
 
 The tag indicating IP address MUST be named ``solanum.chat/ip`` and specifies the IP address of the sender.
 
@@ -20,7 +20,7 @@ When allowed, the tag is added to all commands sent by a user (e.g. PRIVMSG, MOD
 Example
 -------
 
-Consider the example of normal user ``friend`` and privileged user ``staffmember`` each receiving message from ``glguy``::
+Consider the example of normal user ``friend`` and privileged user ``staffmember`` each receiving a message from ``glguy``::
 
     @solanum.chat/ip=2001:db8::1 :glguy!x@2001:db8::1 PRIVMSG friend :My IP doesn't resolve to a hostname.
     @solanum.chat/ip=2001:db8::1 :glguy!x@example.com PRIVMSG friend :Mine does.
